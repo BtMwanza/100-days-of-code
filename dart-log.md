@@ -87,6 +87,7 @@ Learnt to how to comments, print outputs, statements and expressions, arithmetic
 
 # Day 14
 ## Chapter 5: Functions++
+* arrow functions
 
 # Day 15
 

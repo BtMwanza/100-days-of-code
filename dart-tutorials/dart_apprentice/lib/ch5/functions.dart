@@ -101,3 +101,17 @@ Function applyMultiplier(num multiplier) {
     return value * multiplier;
   };
 }
+
+// day 14
+Function countingFunction() {
+  var counter = 0;
+
+  final increamentCounter = () {
+    counter += 1;
+    return counter;
+  };
+  return increamentCounter;
+}
+
+// Arrow functions
+int add(int a, int b) => a + b;

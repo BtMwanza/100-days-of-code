@@ -11,6 +11,7 @@ import 'package:dart_apprentice/ch3/string_type.dart';
 import 'package:dart_apprentice/ch4/ch4_challenges.dart';
 import 'package:dart_apprentice/ch4/ch4_mini_exercise.dart';
 import 'package:dart_apprentice/ch4/control_flow.dart';
+import 'package:dart_apprentice/ch5/ch5_challenges.dart';
 import 'package:dart_apprentice/ch5/ch5_mini_exercise.dart';
 import 'package:dart_apprentice/ch5/functions.dart';
 
@@ -88,6 +89,38 @@ void main(List<String> arguments) {
     print("Using a for-in loop, quadrupled value is: $quadrupled");
   }
   print("\n");
+
+// day 14
+  var counter = 0;
+
+  // ignore: prefer_function_declarations_over_variables
+  final increamentCounter = () {
+    counter += 1;
+  };
+
+  increamentCounter();
+  increamentCounter();
+  increamentCounter();
+  increamentCounter();
+  increamentCounter();
+  print("counter value is $counter");
+
+  final counter1 = countingFunction();
+  final counter2 = countingFunction();
+
+  print(counter1());
+  print(counter2());
+  print(counter1());
+  print(counter1());
+  print(counter2());
+
+  ch5MiniExercise();
+
+  print(add(2, 6));
+  print("\n");
+
+  final test = checkIsPrime(3);
+  print('Is given value a prime? $test \n');
   /* ==>Chapter 6<==  */
 
   /* ==>Chapter 7<==  */
