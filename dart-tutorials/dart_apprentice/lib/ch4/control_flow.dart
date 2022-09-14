@@ -1,3 +1,12 @@
+import 'dart:math';
+
+enum WEATHER {
+  sunny,
+  snowy,
+  cloudy,
+  rainy,
+}
+
 void controlFlow() {
   const bool yes = true;
   const bool no = false;
@@ -102,18 +111,112 @@ void controlFlow() {
   const message = (score >= 60) ? 'You passed' : 'You failed';
   print('$message \n');
 
-  /* ==><== */
-  print('--- ---');
+  /* ==>Switch statements<== */
+  print('---Switch statements---');
+  const number = 3;
+  switch (number) {
+    case 0:
+      print('zero \n');
+      break;
+    case 1:
+      print('one \n');
+      break;
+    case 2:
+      print('two \n');
+      break;
+    case 3:
+      print('three \n');
+      break;
+    case 4:
+      print('four \n');
+      break;
+    default:
+      print('something else \n');
+  }
 
-  /* ==><== */
-  print('--- ---');
+  /* ==>Enumerated types<== */
+  print('---Enumerated types---');
+  const weather = WEATHER.cloudy;
+  switch (weather) {
+    case WEATHER.sunny:
+      print('The weather is ${WEATHER.sunny.name}, put on sunscreen. \n');
+      break;
+    case WEATHER.snowy:
+      print('The weather is ${WEATHER.snowy.name}, get your skis. \n');
+      break;
+    case WEATHER.cloudy:
+    case WEATHER.rainy:
+      print('The weather is ${WEATHER.rainy.name}, bring an umbrella. \n');
+      break;
+    default:
+      print("I'm not familiar with that weather. \n");
+  }
 
-  /* ==><== */
-  print('--- ---');
+  // Day 6
+  /* ==>Loops<== */
+  print('---Loops---');
 
-  /* ==><== */
-  print('--- ---');
+  print('-----<While loop>----');
+  var sum = 1;
+  while (sum < 10) {
+    sum += 4;
+    print('sum + 4 = $sum');
+    print('is sum < 10: ${sum < 10} \n ');
+  }
 
-  /* ==><== */
-  print('--- ---');
+  print('-----<Do-While loop>----');
+  var sum2 = 1;
+  do {
+    sum2 += 4;
+    print('sum2 + 4 = $sum2');
+    print('is sum2 < 10: ${sum2 < 10} \n ');
+  } while (sum2 < 10);
+
+  print('-----<A random interlude>----');
+  final random = Random();
+  while (random.nextInt(6) + 1 != 6) {
+    print('${random.nextInt(6) + 1} is not a six!');
+  }
+  print('Finally, you got a six! \n');
+
+  print('-----<Breaking out of a loop>----');
+  var sum3 = 1;
+  while (true) {
+    sum3 += 4;
+    if (sum3 > 10) {
+      print('loop breaks at $sum3 \n ');
+      break;
+    }
+  }
+
+// day 7
+  print('-----<For loop>----');
+  for (var i = 0; i < 5; i++) {
+    print('i = $i');
+  }
+
+  print('-----<continue keyword>----');
+  for (var i = 0; i < 5; i++) {
+    if (i == 2) {
+      continue;
+    }
+    print('i = $i');
+  }
+
+  print('-----<For-in loop>----');
+  const myString = 'I ❤ Dart';
+  for (var codePoint in myString.runes) {
+    print(String.fromCharCode(codePoint));
+  }
+
+  print('-----<For-each loop>----');
+  const myNumbers = [1, 2, 3];
+
+//with arrow function
+  myNumbers.forEach((number) => print("number: $number"));
+
+//without arrow function
+  myNumbers.forEach((number) {
+    print(number);
+  });
 }
