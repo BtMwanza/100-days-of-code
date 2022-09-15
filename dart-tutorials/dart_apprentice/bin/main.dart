@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dart_apprentice/ch1/hello_dart.dart';
 import 'package:dart_apprentice/ch2/ch2_challenges.dart';
 import 'package:dart_apprentice/ch2/ch2_mini_exercise.dart';
@@ -121,6 +123,8 @@ void main(List<String> arguments) {
 
   final test = checkIsPrime(3);
   print('Is given value a prime? $test \n');
+
+  challenge2();
   /* ==>Chapter 6<==  */
 
   /* ==>Chapter 7<==  */
