@@ -16,6 +16,8 @@ import 'package:dart_apprentice/ch4/control_flow.dart';
 import 'package:dart_apprentice/ch5/ch5_challenges.dart';
 import 'package:dart_apprentice/ch5/ch5_mini_exercise.dart';
 import 'package:dart_apprentice/ch5/functions.dart';
+import 'package:dart_apprentice/ch6/ch6_mini_exercise.dart';
+import 'package:dart_apprentice/ch6/classes.dart';
 
 void main(List<String> arguments) {
   /* ==>Chapter 1<==  */
@@ -40,93 +42,108 @@ void main(List<String> arguments) {
   //ch4Challenges();
 
   /* ==>Chapter 5<==  */
-  functions();
+  // functions();
 
-  final chainamaCase = Functions();
-  print(chainamaCase.fibonacciSequence(10));
+  /* final chainamaCase = Functions();
+  print(chainamaCase.fibonacciSequence(10)); */
   //fibonacciSequence(10);
 
-  helloPersonAndPet("person", "pet");
+  /* helloPersonAndPet("person", "pet"); */
 
-  final fName = fullName("Ray", "Wenderlich");
-  print("His full name is $fName \n");
+  /* final fName = fullName("Ray", "Wenderlich");
+  print("His full name is $fName \n"); */
 
-  final tolerance = withinTolerance(4, max: 3);
-  print('TOLERANCE: $tolerance');
+  /* final tolerance = withinTolerance(4, max: 3);
+  print('TOLERANCE: $tolerance'); */
 
-  final compliment = youAreWonderful(name: "Ana", numberOfPeople: 40);
+  /* final compliment = youAreWonderful(name: "Ana", numberOfPeople: 40);
   print("$compliment \n");
 
   final something = namedFunction2();
   print(something);
-  print("\n");
+  print("\n"); */
 
   //d12
   //using anonymous functions
   // ignore: prefer_function_declarations_over_variables
-  final multiply = (int a, int b) {
+  /*  final multiply = (int a, int b) {
     return a * b;
   };
 
   print(multiply(2, 3));
-  print("\n");
+  print("\n"); */
 
-  print("-Returning a function");
+  /*  print("-Returning a function");
   final triple = applyMultiplier(3);
 
   print(triple(6));
   print(triple(14.0));
-  print("\n");
+  print("\n"); */
 
-  const numbers = [1, 2, 3];
+  /*  const numbers = [1, 2, 3];
 
   numbers.forEach((element) {
     final tripled = element * 3;
     print("Tripled value is: $tripled");
   });
-  print("\n");
+  print("\n"); */
 
-  for (var element in numbers) {
+  /*  for (var element in numbers) {
     final quadrupled = element * 4;
     print("Using a for-in loop, quadrupled value is: $quadrupled");
   }
-  print("\n");
+  print("\n"); */
 
 // day 14
-  var counter = 0;
+  /*  var counter = 0; */
 
   // ignore: prefer_function_declarations_over_variables
-  final increamentCounter = () {
+  /*  final increamentCounter = () {
     counter += 1;
-  };
+  }; */
 
+  /* increamentCounter();
   increamentCounter();
   increamentCounter();
   increamentCounter();
   increamentCounter();
-  increamentCounter();
-  print("counter value is $counter");
+  print("counter value is $counter"); */
 
-  final counter1 = countingFunction();
-  final counter2 = countingFunction();
+  /* final counter1 = countingFunction();
+  final counter2 = countingFunction(); */
 
-  print(counter1());
+  /*  print(counter1());
   print(counter2());
   print(counter1());
   print(counter1());
-  print(counter2());
+  print(counter2()); */
 
-  ch5MiniExercise();
+  /* ch5MiniExercise(); */
 
-  print(add(2, 6));
-  print("\n");
+  /*  print(add(2, 6));
+  print("\n"); */
 
-  final test = checkIsPrime(3);
+  /* final test = checkIsPrime(3);
   print('Is given value a prime? $test \n');
 
-  challenge2();
-  /* ==>Chapter 6<==  */
+  challenge2(); */
 
+  /* ==>Chapter 6<==  */
+  final user = User()
+    //user.id = Random().nextInt(11);
+    // user.name = 'Alexia';
+
+    // using cascade operator, terminator is applied after the last assignment.
+    ..name = "Alexia"
+    ..id = Random().nextInt(11);
+
+  print('${user.toJson()} \n');
+
+  final passwordTest = Password()
+    //
+    ..value = "bgo3npoi8UIg938f-=><><<<>/mdUUBOFGE97394";
+
+  print('${passwordTest.isValid()} \n');
   /* ==>Chapter 7<==  */
 
   /* ==>Chapter 8<==  */
